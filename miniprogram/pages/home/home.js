@@ -1,20 +1,32 @@
 var app = getApp();
+var common = require('../../utils/data4.js')
 import {
   Map
 } from "../../utils/utils";
 Page({
   data: {
-    banner: ['imgUrl1', 'imgUrl2', 'imgUrl3'],
-    notice: ['通知通知通知1111', '通知通知通知3333', '通知通知通知333333asdasd333333333333333333'],
+    
+    notice: ['2020年竞彪体育少年儿童体育文化事业投资人线上交流会', '与广东省校园足球办共同研发建立幼儿足球师资、课程标准', '2019年9月广东体博会正式组建广东团队'],
     localShow: false,
     localList: [],
-    userLocal: ""
-
+    userLocal: "",
+	ketang:[
+		{url:'http://manager.kenput.cn/static/img/k1.jpg',title:'教练和小朋友们'},
+		{url:'http://manager.kenput.cn/static/img/k2.jpg',title:'教练和小朋友们'},
+		{url:'http://manager.kenput.cn/static/img/k3.jpg',title:'刻苦练习'},
+		{url:'http://manager.kenput.cn/static/img/k4.jpg',title:'刻苦练习'},
+		{url:'http://manager.kenput.cn/static/img/k5.jpg',title:'刻苦练习'},
+		{url:'http://manager.kenput.cn/static/img/k6.jpg',title:'刻苦练习'}
+	]
   },
 
   onLoad: function (options) {
     this.getBanner(3);
-    this.getLocal();
+    // this.getLocal();
+	let list = common.getTeamList()
+	this.setData({
+		news:list
+	})
 
   },
   onReady: function () {
@@ -34,7 +46,8 @@ Page({
   async getBanner(v) {
     let tempArr = [];
     for (let i = 1; i <= v; i++)
-      tempArr = tempArr.concat(`https://zwp1.top/images/banner${i}.jpg`)
+      // tempArr = tempArr.concat(`https://zwp1.top/images/banner${i}.jpg`)
+      tempArr = tempArr.concat(`http://manager.kenput.cn/static/img/0${i}.jpg`)
     this.setData({
       banner: tempArr
     })
@@ -58,7 +71,29 @@ Page({
       url
     })
   },
-
+// 跳到非tabbar页面
+navigateTo2(e){
+  let url = `/pages/${e.currentTarget.dataset.data}/${e.currentTarget.dataset.data}`;
+    wx.navigateTo({
+      url
+    })
+},
+detailone(){
+	wx.navigateTo({
+		url:'/pages/daoshi/detail/detail?id=1'
+	})
+},
+detailtwo(){
+	wx.navigateTo({
+		url:'/pages/daoshi/detail/detail?id=2'
+	})
+},
+goToDetail:function(e){
+		let id = e.currentTarget.dataset.id
+		wx.navigateTo({
+			url:'/pages/news/detail/detail?id=' + id
+		})
+	},
   // 获取附近的地址
   async getLocal() {
     let res = await Map.search({

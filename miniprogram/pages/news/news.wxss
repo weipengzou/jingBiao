@@ -1,0 +1,39 @@
+.swiper {
+  height: 400rpx;
+}
+.box{
+	height: 70vh;
+	padding: 20rpx;
+	display: flex;
+	flex-direction: column;
+	width: 100%;
+}
+.info{
+	display: flex;
+	flex-direction: row;
+	margin: 20rpx;
+	background-color: #fff;
+	padding: 10rpx;
+	border-radius: 10rpx;
+}
+.img{
+	width: 300rpx;
+	height: 240rpx;
+	padding: 4rpx;
+	border: 2rpx #e6e6e6 solid;
+}
+.info view{
+	font-size: 28rpx;
+	margin-left: 20rpx;
+	display: flex;
+	flex-direction: column;
+	width: 65vw;
+}
+.info view text{
+	line-height: 50rpx;
+}
+.time{
+	text-align: right;
+	color: #adadad;
+	font-size: 26rpx;
+}

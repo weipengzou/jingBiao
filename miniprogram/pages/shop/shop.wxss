@@ -1,24 +1,27 @@
-.title {
-  width: 100%;
-  line-height: 36rpx;
-  font-weight: 600;
-  padding: 20rpx;
-  box-sizing: border-box;
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
-}
-.title .text {
-  font-size: 32rpx;
-}
-.title .more {
+.nav {
   display: flex;
-  float: right;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  background-color: #ffffff;
+
 }
-.title .more iconfont {
+
+.nav .nav-btn {
   display: flex;
+  flex-direction: column;
+  text-align: center;
   align-items: center;
+  width: 25%;
 }
+.nav .nav-btn text {
+  margin: 10rpx 0;
+  font-size: 26rpx;
+}
+.nav .nav-btn image{
+  width: 80rpx;
+  height: 80rpx;
+}
+
 .price {
   font-weight: bold;
   font-size: 110%;
@@ -30,6 +33,9 @@
 .banner scroll-view swiper .swiper-item image {
   width: 100%;
   height: 100%;
+}
+.product .hot{
+  background-color: #ffffff;
 }
 .product .hot .content .van-image,
 .product .new .content .van-image {
@@ -56,6 +62,9 @@
   display: inline-block;
   margin: 0 20rpx;
 }
+.product .recommend .content,.product .new .content,.product .discount .content{
+  background-color: #ffffff; padding: 6rpx;
+}
 .product .recommend .content .goodsCard,
 .product .discount .content .goodsCard {
   display: flex;
@@ -79,7 +88,6 @@
 .product .recommend .content .goodsCard .content .title,
 .product .discount .content .goodsCard .content .title {
   padding: 10rpx 0;
-  font-weight: 600;
   width: 500rpx;
 }
 .product .recommend .content .goodsCard .content .desc,

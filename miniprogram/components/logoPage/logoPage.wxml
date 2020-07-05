@@ -1,11 +1,9 @@
 <view class="logo">
-	<image
-		src="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1593275213903&di=3ff1b930e4495922fffab6e440c023ff&imgtype=0&src=http%3A%2F%2Fhbimg.b0.upaiyun.com%2F13a0cf6362c8886e3aa6761e6daa4aea2d3b89c99a27-xDQIOx_fw658"
-	></image>
+	<image src="http://manager.kenput.cn/static/img/logo.png" mode="aspectFit"></image>
 	<view>
-		上面图片后期替换即可
+		
 	</view>
 	<view class="title">
-		竞彪体育
+		广州竞彪科技有限责任公司
 	</view>
 </view>

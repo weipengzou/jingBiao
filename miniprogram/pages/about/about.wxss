@@ -1,0 +1,16 @@
+
+van-tab{
+	padding: 10rpx;
+}
+.title{
+	font-size: 32rpx;
+}
+scroll-view{
+	height: 90vh;
+}
+.about{
+	line-height: 60rpx; font-size: 30rpx; color: #818181;
+}
+.img{
+	text-align: center;
+}

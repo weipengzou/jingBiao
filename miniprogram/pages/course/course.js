@@ -6,10 +6,16 @@ Page({
    */
   data: {
     activeKey: 0,
-    coursePageData: []
+    coursePageData: [],
     // ['标签1数据','标签2数据']
+	active: 0,
   },
-
+	// onChange(event) {
+	//     wx.showToast({
+	//       title: `切换到标签 ${event.detail.name}`,
+	//       icon: 'none',
+	//     });
+	//   },
   /**
    * 生命周期函数--监听页面加载
    */
@@ -90,5 +96,10 @@ Page({
         console.log(err, e.currentTarget.dataset.data)
       }
     })
+  },
+  goto(){
+	  wx.navigateTo({
+		  url:'/pages/form/form'
+	  })
   }
 })

@@ -1,0 +1,7 @@
+<van-divider contentPosition="center">园区展示</van-divider>
+<scroll-view scroll-y class="box">
+	<view class="info" wx:for="{{team}}" wx:key="index" bind:tap="goToDetail" data-id="{{item.id}}">
+		<image src="{{item.src2}}" mode="aspectFill"></image>
+		<text>{{item.title2}}</text>
+	</view>
+</scroll-view>

@@ -1,0 +1,19 @@
+<!-- 轮播图 -->
+<!-- <view class="box">
+	
+</view> -->
+<view class="box">
+	<van-tabs active="{{ active }}">
+	  <van-tab title="活动赛事">
+		  <view class="info" wx:for="{{team}}" wx:key="index" bind:tap="goToDetail" data-id="{{item.id}}">
+		  	<image src="{{item.src}}" class="img"></image>
+		  	<view>
+		  		<text>{{item.title}}</text>
+		  		<text class="time">发布时间：{{item.time}}</text>
+		  	</view>
+		  </view>
+	  </van-tab>
+	  <van-tab title="动态热点">内容 2</van-tab>
+	  <van-tab title="足球公益">内容 3</van-tab>
+	</van-tabs>
+</view>

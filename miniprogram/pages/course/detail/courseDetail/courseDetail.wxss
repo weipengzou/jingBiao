@@ -15,6 +15,11 @@
   width: 200rpx;
   margin: 0 10rpx;
   line-height: 50rpx;
-  background-color: #da4126;
+  background-color: #00c17b;
   color: white;
+  font-size: 28rpx;
+}
+.main{
+	padding: 20rpx;
+	font-size: 28rpx; background-color: #ffffff;
 }

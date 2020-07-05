@@ -73,49 +73,45 @@
             <text>我的服务</text>
         </view>
         <view class="btn-box">
+			<view class="btn" bind:tap="navigationTo" data-data="精彩瞬间">
+			    <image src="../../assets/images/my1.png"></image>
+			    <text>精彩瞬间</text>
+			</view>
             <view class="btn" bind:tap="navigationTo" data-data="我的课程">
-                <iconfont name="zhuanjia"></iconfont>
+                <image src="../../assets/images/my2.png"></image>
                 <text>我的课程</text>
             </view>
+			<view class="btn" bind:tap="navigationTo" data-data="我的课堂">
+			    <image src="../../assets/images/my3.png"></image>
+			    <text>我的课堂</text>
+			</view>
             <view class="btn" bind:tap="navigationTo" data-data="我的资料">
-                <iconfont name="shenfentianxie"></iconfont>
+                <image src="../../assets/images/my4.png"></image>
                 <text>我的资料</text>
             </view>
             <view class="btn" bind:tap="navigationTo" data-data="我的教练">
-                <iconfont name="shenfen"></iconfont>
+                <image src="../../assets/images/my5.png"></image>
                 <text>我的教练</text>
             </view>
             <view class="btn" bind:tap="navigationTo" data-data="我的收藏">
-                <iconfont name="start"></iconfont>
+                <image src="../../assets/images/my6.png"></image>
                 <text>我的收藏</text>
             </view>
-            <view class="btn" bind:tap="navigationTo" data-data="我的会员">
-                <iconfont name="vip"></iconfont>
-                <text>我的会员</text>
-            </view>
-            <view class="btn" bind:tap="navigationTo" data-data="精彩瞬间">
-                <iconfont name="tupian1"></iconfont>
-                <text>精彩瞬间</text>
+            <view class="btn" bind:tap="navigationTo" data-data="我要反馈">
+                <image src="../../assets/images/my7.png"></image>
+                <text>我要反馈</text>
             </view>
             <!-- <view class="btn" bind:tap="navigationTo" data-data="数据中心">
                 <iconfont name="bingtu"></iconfont>
                 <text>数据中心</text>
             </view> -->
-            <view class="btn" bind:tap="feedBack" data-data="还没想好">
-                <iconfont name="kefu"></iconfont>
+            <view class="btn"  bind:tap="call">
+                <image src="../../assets/images/my8.png"></image>
                 <text>联系竞彪</text>
-                <van-dialog id="van-dialog" />
-                <van-overlay show="{{ isFeedBackShow }}">
-                    <view class="feedBack">
-                        <view class="block" catch:tap="noop">
-                            <text>客服电话</text>
-                            <text>132456789</text>
-                        </view>
-                    </view>
-                </van-overlay>
             </view>
         </view>
     </view>
+	<van-divider dashed />
     <!-- <view class="footer">
         <view>By@Kenput</view>
         <view>Copyright2020</view>

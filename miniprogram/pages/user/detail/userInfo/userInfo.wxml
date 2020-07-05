@@ -1,17 +1,19 @@
+<van-divider contentPosition="center">个人资料</van-divider>
 <view class="userInfo">
-    <van-image class="avator" round width="100rpx" height="100rpx" src="{{userInfo.avatar}}" />
-    <view>用户名：{{userInfo.name}}</view>
-    <view>
-        <label>
-            手机号：
-            <input type="number" value="{{userInfo.phone}}" bindblur='getUserPhoneNumber' />
-        </label>
-    </view>
-    <view bind:tap="getUserAddress">
-        <label>
-            收货地址：
-            <view wx:if="{{!userInfo.address}}">点击获取用户地址</view>
-            <text wx:else>{{userInfo.address}}</text>
-        </label>
-    </view>
+	<van-image class="avator" round width="200rpx" height="200rpx" src="{{userInfo.avatar}}" />
+	<view>用户名：{{userInfo.name}}</view>
 </view>
+
+<!-- <view>
+	手机号：<input type="number" value="{{userInfo.phone}}" bindblur='getUserPhoneNumber' />
+</view>
+<view bind:tap="getUserAddress">
+	收货地址：<text wx:if="{{!userInfo.address}}">点击获取用户地址</text><text wx:else>{{userInfo.address}}</text>
+</view> -->
+
+<van-cell is-link title="手机号" link-type="navigateTo" url="/pages/user/user"/>
+<van-cell is-link title="收货地址" link-type="navigateTo" url="/pages/user/user"/>
+<van-cell is-link title="我的课堂" link-type="navigateTo" url="/pages/user/user"/>
+<van-cell is-link title="我的装备" link-type="navigateTo" url="/pages/user/user"/>
+<van-cell is-link title="小孩数据" link-type="navigateTo" url="/pages/user/user"/>
+<van-cell is-link title="我要反馈" link-type="navigateTo" url="/pages/user/user"/>

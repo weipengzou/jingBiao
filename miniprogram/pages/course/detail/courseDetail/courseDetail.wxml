@@ -1,4 +1,4 @@
-<view class="" hover-class="none" hover-stop-propagation="false">课程详细页</view>
+
 <!-- 轮播图 -->
 <view class="banner">
     <swiper class="swiper" indicator-dots indicator-color="rgba(0,0,0,.3)" autoplay current="0">

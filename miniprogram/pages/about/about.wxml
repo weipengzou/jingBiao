@@ -1,0 +1,22 @@
+<view class="box">
+	<van-tabs active="a">
+		<scroll-view scroll-y>
+			<van-tab title="竞彪简介" name="a" class="title">
+				<text class="about">　　广州竞彪科技有限责任公司（简称“竞彪幼足），是一家少年儿童体育、文化产业运营公司，公司立足于3-15岁少年儿童体育培训领域，聚焦幼儿、少年儿童校园足球普及与发展。\n　　竞彪幼足秉承着"为提升少年儿童体育素养，助力每一位孩子更加健康快乐成长而奉献"的使命，与政府、学校、行业专家、体育协会等行业优秀机构合作，构建先进的教体融合服务运营体系，共同促进少年儿童体育素养提升。\n　　竞彪幼足以"竞和致胜、彪行千里，两千基地，迭代百年"的战略目标，在广东、广西、浙江、四川、湖南等近十个省份的上百座城市开展了以"竞彪体育基地"模式的幼儿足球教育项目，服务学员近万名。</text>
+				<view class="img">
+					<image src="http://manager.kenput.cn/static/img/logo.png" mode="widthFix"></image>
+				</view>
+			</van-tab>
+			<!-- <van-tab title="师资团队" name="b" class="title">
+				<view class="img">
+					<image src="http://manager.kenput.cn/static/img/per.png" mode="widthFix"></image>
+				</view>
+			</van-tab> -->
+			<van-tab title="联系我们" name="c" class="title">
+				<view class="about">地址：</view>
+				<view class="about">电话：</view>
+				<view class="about">邮箱：</view>
+			</van-tab>
+		</scroll-view>
+	</van-tabs>
+</view>

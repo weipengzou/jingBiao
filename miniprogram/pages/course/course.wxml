@@ -1,34 +1,70 @@
-<view class="bigBox">
-    <view class="left">
-        <van-sidebar active-key="{{ activeKey }}" bind:change="activeChange" custom-class="sidebar">
-            <van-sidebar-item title="课程分类" custom-class="sidebar-item" />
-            <van-sidebar-item title="精彩瞬间" custom-class="sidebar-item" />
-        </van-sidebar>
-    </view>
-    <view class="right">
-        <scroll-view class="scroll" scroll-y="true">
-            <swiper vertical current="{{activeKey}}" bindchange="activeKeyChange" easing-function="easeOutCubic">
-                <view class="courseTitle">
-                    <view>课程</view>
-                </view>
-                <swiper-item class="item1">
-                    <view class="course-list" bind:tap="navigationTo" data-data='少儿课程'>
-                        <van-image round width="120rpx" height="120rpx" src="https://image.dayouqiantu.cn/1585727667472.png" />
-                        少儿课程
-                    </view>
-                    <view class="course-list" bind:tap="navigationTo" data-data='精品课程'>
-                        <van-image round width="120rpx" height="120rpx" src="https://image.dayouqiantu.cn/1585727688027.png" />
-                        精品课程
-                    </view>
-                    <view class="course-list" bind:tap="navigationTo" data-data='进阶课程'>
-                        <van-image round width="120rpx" height="120rpx" src="https://image.dayouqiantu.cn/1585727696618.png" />
-                        进阶课程
-                    </view>
-                </swiper-item>
-                <swiper-item>
-                    <view>get user photo or video</view>
-                </swiper-item>
-            </swiper>
-        </scroll-view>
-    </view>
+<!-- 搜索 -->
+<van-search value="{{ value }}" placeholder="请输入课程关键词" use-action-slot>
+	<view slot="action" bind:tap="search">搜索</view>
+</van-search>
+
+<view class="title">竞彪体育基地课程</view>
+<view class="box">
+	<van-tabs active="{{ active }}">
+		<van-tab title="广西">
+			<view class="pro">
+				<image src="../../assets/images/c1.jpg" mode="widthFix"></image>
+				<view class="info">
+					<view class="name">少儿课程</view>
+					<view class="one">
+						<view><text>课程时长：</text>60分钟/次课</view>
+						<view><text>适合年龄：</text>3-5岁儿童</view>
+						<view><text>课程特色：</text>建立兴趣，提升身体机能。</view>
+						<view><text>课程简介：</text>主要针对3-5岁年龄段儿童设立，以趣味性为主，目的是要建立孩子对足球的强烈兴趣。
+						</view>
+					</view>
+					<view class="two">
+						<button bind:tap="navigationTo" data-data='少儿课程'>查看详情</button>
+						<button bind:tap="goto">我要报名</button>
+					</view>
+				</view>
+			</view>
+		</van-tab>
+		<van-tab title="广州">
+			<view class="pro" bind:tap="navigationTo" data-data='精品课程'>
+				<image src="../../assets/images/c2.jpg" mode="widthFix"></image>
+				<view class="info">
+					<view class="name">精品课程</view>
+					<view class="one">
+						<view><text>课程时长：</text>60分钟/次课</view>
+						<view><text>适合年龄：</text>4-5岁儿童</view>
+						<view><text>课程特色：</text>建立兴趣，提升身体机能。</view>
+						<view><text>课程简介：</text>主要针对3-5岁年龄段儿童设立，以趣味性为主，目的是要建立孩子对足球的强烈兴趣。
+						</view>
+					</view>
+					<view class="two">
+						<button bind:tap="navigationTo" data-data='精品课程'>查看详情</button>
+						<button bind:tap="goto">我要报名</button>
+					</view>
+				</view>
+			</view>
+		</van-tab>
+		<van-tab title="深圳">
+			<view class="pro" bind:tap="navigationTo" data-data='进阶课程'>
+				<image src="../../assets/images/c3.jpg" mode="widthFix"></image>
+				<view class="info">
+					<view class="name">进阶课程</view>
+					<view class="one">
+						<view><text>课程时长：</text>60分钟/次课</view>
+						<view><text>适合年龄：</text>4-5岁儿童</view>
+						<view><text>课程特色：</text>建立兴趣，提升身体机能。</view>
+						<view><text>课程简介：</text>主要针对3-5岁年龄段儿童设立，以趣味性为主，目的是要建立孩子对足球的强烈兴趣。
+						</view>
+					</view>
+					<view class="two">
+						<button bind:tap="navigationTo" data-data='进阶课程'>查看详情</button>
+						<button bind:tap="goto">我要报名</button>
+					</view>
+				</view>
+			</view>
+		</van-tab>
+		<van-tab title="花都">花都基地课程添加中……敬请期待</van-tab>
+		<van-tab title="清远">清远基地课程添加中……敬请期待</van-tab>
+	</van-tabs>
+
 </view>

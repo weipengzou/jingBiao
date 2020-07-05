@@ -1,0 +1,13 @@
+<van-tabs active="a">
+	<scroll-view scroll-y class="box">
+		<van-tab title="核心师资" name="a" class="title">
+			<view class="info" wx:for="{{team}}" wx:key="index" bind:tap="goToDetail" data-id="{{item.id}}">
+				<image src="{{item.src}}" mode="aspectFill"></image>
+				<text>{{item.title}}</text>
+			</view>
+		</van-tab>
+		<van-tab title="教练团队" name="c" class="title">
+
+		</van-tab>
+	</scroll-view>
+</van-tabs>

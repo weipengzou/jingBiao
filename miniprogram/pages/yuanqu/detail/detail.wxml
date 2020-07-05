@@ -1,0 +1,6 @@
+<view class="box" wx:if='{{article.id}}'>
+	<view class="title">{{article.title2}}</view>
+	<view>
+		<image src='{{article.src2}}' mode="aspectFit"></image>
+	</view>
+</view>

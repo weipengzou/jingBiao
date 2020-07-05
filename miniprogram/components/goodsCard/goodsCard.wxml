@@ -5,7 +5,7 @@
         <view class="desc">{{desc}}</view>
         <view class="price">
             <text>￥{{price}}</text>
-            <text class="originPrice">我是组件  原价:￥{{originPrice}}</text>
+            <text class="originPrice">原价:￥{{originPrice}}</text>
         </view>
     </view>
 </view>

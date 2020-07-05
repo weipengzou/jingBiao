@@ -1,0 +1,7 @@
+<van-divider contentPosition="center">团队风采</van-divider>
+<scroll-view scroll-y class="box">
+	<view class="info" wx:for="{{team}}" wx:key="index" bind:tap="goToDetail" data-id="{{item.id}}">
+		<image src="{{item.src}}" mode="aspectFill"></image>
+		<text>{{item.title}}</text>
+	</view>
+</scroll-view>

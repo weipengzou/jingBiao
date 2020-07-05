@@ -1,3 +1,6 @@
+.banner{
+  width: 100vw; background-color: #ffffff; margin-top: 4rpx; padding-top: 6rpx;
+}
 .banner scroll-view {
   height: 400rpx;
 }
@@ -10,22 +13,23 @@
   width: 100%;
   border-radius: 20rpx;
 }
+
 .notice {
   display: flex;
   height: 80rpx;
   line-height: 80rpx;
-  justify-content: space-between;
-  margin: 0 10rpx;
+  padding: 6rpx 0;
+  background-color: #ffffff;  margin-top: 4rpx;
 }
 .notice .img {
-  width: 30vw;
+  width: 20vw;
   font-weight: 800;
-  font-size: 36rpx;
+  font-size: 30rpx;
   text-align: center;
   color: green;
 }
 .notice .notice-scroll {
-  width: 70vw;
+  width: 80vw;
 }
 .notice .notice-scroll .notice-swiper {
   height: 110rpx;
@@ -33,25 +37,28 @@
 .notice .notice-scroll .notice-swiper .notice-swiper-item view {
   width: 100%;
   box-sizing: border-box;
-  background-color: rgba(0, 0, 0, 0.5);
-  border-radius: 20rpx;
-  padding: 0 50rpx;
-  color: white;
+  background-color: rgba(68, 198, 154, .2);
+  border-radius: 10rpx;
+  padding: 0 20rpx;
+  color: #656565;
   overflow: hidden;
   text-overflow: ellipsis;
   display: -webkit-box;
   -webkit-line-clamp: 1;
   -webkit-box-orient: vertical;
+  font-size: 26rpx;
 }
 .notice .notice-scroll .notice-swiper icon {
   float: right;
   margin: 0 50rpx;
 }
+
+
 .nav {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-around;
-  margin: 5rpx 0;
+  margin-top: 4rpx; background-color: #ffffff;
 }
 .nav .nav-btn {
   display: flex;
@@ -60,69 +67,102 @@
   align-items: center;
   width: 25%;
 }
-.nav .nav-btn view {
+.nav .nav-btn text {
   margin: 10rpx 0;
+  font-size: 26rpx;
 }
+.nav .nav-btn image{
+  width: 80rpx;
+  height: 80rpx;
+}
+
+
 .about {
-  color: white;
-  text-align: center;
+  background-color: #ffffff;
 }
 .about > view {
   box-sizing: border-box;
-  margin: 10rpx 20rpx;
+  margin: 20rpx;
 }
 .about .company {
-  background: url('http://admin.kenput.cn/file/pic/left-20200526105802872.png');
+  background: url('http://manager.kenput.cn/static/img/company1.png');
 }
 .about .team {
-  background: url('http://admin.kenput.cn/file/pic/center-20200526105758288.png');
+  background: url('http://manager.kenput.cn/static/img/team1.png');
 }
 .about .children {
-  background: url('http://admin.kenput.cn/file/pic/right-2020052610580792.png');
+  background: url('http://manager.kenput.cn/static/img/master.png');
 }
-.about .park {
-  background: url('https://zwp1.top/images/home-park.jpg') no-repeat center;
-}
-.about .class {
-  background: url('https://zwp1.top/images/home-class.jpg') no-repeat center;
-}
-.about .park,
-.about .class {
-  letter-spacing: 5rpx;
-  background-size: cover;
-}
+
 .about .small-view {
   display: flex;
   justify-content: space-between;
 }
 .about .company,
 .about .team,
-.about .children,
-.about .park,
-.about .class {
+.about .children{
   height: 250rpx;
-  background-color: green;
   padding-top: 40rpx;
   border-radius: 20rpx;
-}
-.about .company :first-child,
-.about .team :first-child,
-.about .children :first-child,
-.about .park :first-child,
-.about .class :first-child {
-  font-size: 36rpx;
-  font-weight: 500;
-}
-.about .company,
-.about .team,
-.about .children {
   width: 230rpx;
-  font-size: 28rpx;
   background-size: cover;
+}
+
+/* 导师介绍 */
+
+.info{
+	width: 100vw;
+	margin: 4rpx auto;
+	background-color: #fff;
+	padding: 10rpx;
+}
+
+/* 课堂展示 */
+
+.ketang .box{
+	width: 100vw;
+	margin: 4rpx auto;
+	background-color: #fff;
+	padding: 10rpx;
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+}
+.ketang .box .info{
+	width: 30%;
+	display: flex;
+	flex-direction: column;
+	font-size: 26rpx;
+	text-align: center;
+}
+.ketang .box .info image{
+	width: 220rpx;
+	border: 2rpx solid #e7e7e7;
+	padding: 2rpx;
+}
+.ketang .box .info text{
+	line-height: 60rpx;
+}
+.person{
+	display: flex;
+	flex-direction: row;
+}
+.person image{
+	width: 260rpx;
+}
+.person .box{
+	display: flex;
+	flex-direction: column;
+}
+.person .box text{
+	line-height: 60rpx;
+	font-size: 28rpx;
 }
 .tab .list {
   display: flex;
   justify-content: center;
+  padding: 20rpx;
+  background-color: #ffffff;
 }
 .tab .list .left,
 .tab .list .right {
@@ -132,16 +172,18 @@
   width: 500rpx;
 }
 .tab .list .right .tittle {
+	font-size: 28rpx;
   font-weight: bold;
 }
 .tab .list .right .content {
-  font-size: 95%;
+  font-size: 26rpx;
   color: gray;
   overflow: hidden;
   text-overflow: ellipsis;
   display: -webkit-box;
   -webkit-line-clamp: 3;
   -webkit-box-orient: vertical;
+  line-height: 50rpx;
 }
 .wrapper {
   display: flex;

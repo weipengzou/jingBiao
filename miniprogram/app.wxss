@@ -9,8 +9,11 @@
 
 button {
   background: initial;
+  font-size: 28rpx;
 }
-
+view,text{
+	font-size: 28rpx;
+}
 button:focus {
   outline: 0;
 }
@@ -21,13 +24,14 @@ button::after {
 
 
 page {
-  background: #f6f6f6;
+  background: #e7e7e7;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
+  font-size: 28rpx;
+  color:#484848;
 }
 
-.userinfo,
 .uploader,
 .tunnel {
   margin-top: 40rpx;

@@ -1,0 +1,28 @@
+.swiper {
+  height: 400rpx;
+}
+.box{
+	display: flex;
+	flex-direction: column;
+	width: 100%; 
+}
+.info{
+	display: flex;
+	flex-direction: row;
+	margin-bottom: 5rpx;background-color: #ffffff; padding: 10rpx;
+}
+.info image{
+	width: 300rpx;
+	height: 300rpx;
+	padding: 4rpx;
+	border: 2rpx #e6e6e6 solid;
+}
+.info view{
+	font-size: 28rpx;
+	margin-left: 20rpx;
+	display: flex;
+	flex-direction: column;
+}
+.info view text{
+	line-height: 50rpx;
+}

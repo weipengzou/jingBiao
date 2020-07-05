@@ -91,8 +91,8 @@ Page({
       case '售后':
         curPage = 'orders';
         break;
-      case '我的课程':
-        curPage = 'course';
+      case '精彩瞬间':
+        curPage = '';
         break;
       case '绑定手机':
       case '我的资料':
@@ -146,5 +146,9 @@ Page({
       isFeedBackShow: !this.data.isFeedBackShow
     })
   },
-  noop() {}
+  call() {
+	  wx.makePhoneCall({
+		  phoneNumber:'13800000000'
+	  })
+  }
 })

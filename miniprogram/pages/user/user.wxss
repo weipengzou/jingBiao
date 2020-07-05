@@ -4,6 +4,7 @@ page {
   align-items: center;
   background: url('https://zwp1.top/images/user-bg1.png') top no-repeat;
   background-size: contain;
+  font-size: 28rpx;
 }
 page .wallet,
 page .server,
@@ -86,6 +87,7 @@ page .order .btn-box > .btn view {
 .user .wallet .btn-box {
   justify-content: space-between;
 }
+
 .server .feedBack {
   display: flex;
   align-items: center;
@@ -104,6 +106,10 @@ page .order .btn-box > .btn view {
 }
 .server .feedBack .block text {
   margin: 20rpx;
+}
+.server .btn-box image{
+	width: 80rpx;
+	height: 80rpx;
 }
 .footer {
   position: fixed;

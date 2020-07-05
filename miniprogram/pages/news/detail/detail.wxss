@@ -1,0 +1,23 @@
+.box{
+	padding: 15rpx;
+	text-align: center;
+}
+.title{
+	font-size: 12pt;
+	line-height: 80rpx;
+	border-bottom: 2rpx solid #cdcdcd;
+}
+.poster image{
+	width: 100%;
+	padding: 4rpx;
+	border: 2rpx solid #c6c6c6;
+}
+.content{
+	text-align: left; text-indent: 2em; line-height: 50rpx; font-size: 28rpx;
+}
+.time{
+	text-align: right;
+	color: #adadad;
+	font-size: 26rpx;
+	margin-top: 20rpx;
+}

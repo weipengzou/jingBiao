@@ -1,0 +1,73 @@
+<van-divider contentPosition="center">课程报名</van-divider>
+<form action="">
+	<van-row>
+		<van-col span="6">
+			<label for="">姓名</label>
+		</van-col>
+		<van-col span="18">
+			<input type="text" name='name' placeholder="请输入小孩姓名"></input>
+		</van-col>
+	</van-row>
+	<van-row>
+		<van-col span="6">
+			<label for="">性别</label>
+		</van-col>
+		<van-col span="18">
+			<radio-group name="gender">
+				<radio color='#de6e6d' value="1">男</radio>
+				<radio color='#de6e6d' value="2">女</radio>
+			</radio-group>
+		</van-col>
+	</van-row>
+	<van-row>
+		<van-col span="6">
+			<label for="">生日</label>
+		</van-col>
+		<van-col span="18">
+			<picker name="birthday" mode="date">
+				<view>{{date}}</view>
+			</picker>
+		</van-col>
+	</van-row>
+	<van-row>
+		<van-col span="6">
+			<label for="">电话</label>
+		</van-col>
+		<van-col span="18">
+			<input type="number" name='tel' placeholder="请输入联系电话"></input>
+		</van-col>
+	</van-row>
+	<van-row>
+		<van-col span="6">
+			<label for="">关系</label>
+		</van-col>
+		<van-col span="18">
+			<input type="text" name='relationship' placeholder="描述你们的关系" />
+		</van-col>
+	</van-row>
+	<van-row>
+		<van-col span="6">
+			<label for="">地区</label>
+		</van-col>
+		<van-col span="18">
+			<picker name="diqu" mode="region">
+				<view>{{diqu}}</view>
+			</picker>
+		</van-col>
+	</van-row>
+	<van-row>
+		<van-col span="6">
+			<label for="">课程</label>
+		</van-col>
+		<van-col span="18">
+			<picker name="course" range="{{course}}" value="{{index}}" bindchange="change">
+				<view>{{course[index]}}</view>
+			</picker>
+		</van-col>
+	</van-row>
+	<van-row>
+		<van-col span='18' offset='3'>
+			<button>提交表单</button>
+		</van-col>
+	</van-row>
+</form>

@@ -5,30 +5,11 @@
 <!-- 轮播 -->
 <view class="banner">
 	<scroll-view>
-		<swiper
-			class="swiper"
-			indicator-dots
-			indicator-color="rgba(0,0,0,.3)"
-			autoplay
-			current="0"
-			easing-function="easeInOutCubic"
-			circular
-		>
-			<swiper-item
-				class="swiper-item"
-				item-id=""
-				wx:if="{{banner}}"
-				wx:for="{{banner}}"
-				wx:key="index"
-			>
+		<swiper class="swiper" indicator-dots indicator-color="rgba(0,0,0,.3)" autoplay current="0" easing-function="easeInOutCubic"
+		 circular>
+			<swiper-item class="swiper-item" item-id="" wx:if="{{banner}}" wx:for="{{banner}}" wx:key="index">
 				<!-- <van-image width="100%" height="100%" src="{{item}}" fit="contain" lazy-load bind:tap="handleClick"  image-class='bannerImg'/> -->
-				<image
-					src="{{item}}"
-					mode="widthFix"
-					lazy-load
-					bind:tap="handleClick"
-					image-class="bannerImg"
-				/>
+				<image src="{{item}}" mode="widthFix" lazy-load bind:tap="handleClick" image-class="bannerImg" />
 			</swiper-item>
 		</swiper>
 	</scroll-view>
@@ -36,128 +17,133 @@
 <!-- 通知 -->
 <view class="notice">
 	<view class="img">
-		<view>竞彪通知</view>
+		通知公告
 	</view>
 	<scroll-view class="notice-scroll">
 		<swiper class="notice-swiper" vertical autoplay easing-function="easeInOutCubic" circular>
-			<swiper-item
-				class="notice-swiper-item"
-				wx:for="{{notice}}"
-				wx:key="index"
-				bind:tap="handleClick"
-			>
+			<swiper-item class="notice-swiper-item" wx:for="{{notice}}" wx:key="index" bind:tap="handleClick">
 				<view>{{item}}</view>
 			</swiper-item>
 		</swiper>
 	</scroll-view>
 </view>
-<van-divider />
+
 <!-- navbtn通知列表(待办) -->
 <view class="nav">
+	<view class="nav-btn" bind:tap="navigationTo" data-data="course">
+		<image src="../../assets/images/h1.png"></image>
+		<text class="">课程商品</text>
+	</view>
 	<view class="nav-btn" bind:tap="navigationTo" data-data="shop">
-		<iconfont name="category" size="84"></iconfont>
-		<text class="">商品分类</text>
+		<image src="../../assets/images/h2.png"></image>
+		<text class="">装备类别</text>
 	</view>
-	<view class="nav-btn" bind:tap="navigationTo" data-data="home">
-		<iconfont name="new" size="84"></iconfont>
-		<text class="">图文咨询</text>
+	<view class="nav-btn" bind:tap="navigateTo2"  data-data="team">
+		<image src="../../assets/images/h3.png"></image>
+		<text class="">团队风采</text>
 	</view>
-	<view class="nav-btn" bind:tap="navigationTo" data-data="user">
-		<iconfont name="mark" size="84"></iconfont>
-		<text class="">我的收藏</text>
+	<view class="nav-btn" bind:tap="navigateTo2" data-data="lesson">
+		<image src="../../assets/images/h4.png"></image>
+		<text class="">课堂风采</text>
 	</view>
-	<view class="nav-btn" bind:tap="navigationTo" data-data="user">
-		<iconfont name="coupon" size="84"></iconfont>
-		<text class="">优惠券</text>
+	<view class="nav-btn" bind:tap="navigateTo2" data-data="form">
+		<image src="../../assets/images/h5.png"></image>
+		<text class="">课程报名</text>
+	</view>
+	<view class="nav-btn" bind:tap="navigateTo2" data-data="daren">
+		<image src="../../assets/images/h6.png"></image>
+		<text class="">少儿达人</text>
+	</view>
+	<view class="nav-btn" bind:tap="navigateTo2" data-data="yuanqu">
+		<image src="../../assets/images/h7.png"></image>
+		<text class="">园区展示</text>
+	</view>
+	<view class="nav-btn" bind:tap="navigateTo2" data-data="data">
+		<image src="../../assets/images/h8.png"></image>
+		<text class="">少儿数据</text>
 	</view>
 </view>
-<van-divider />
+
+
+
 <view class="about">
 	<view class="small-view">
-		<view class="company" bind:tap="navigationToDetail" data-data="company">
-			<view>公司简介</view>
-			<view>Company profile</view>
+		<view class="company" bind:tap="navigateTo2" data-data="about">
 		</view>
-		<view class="team" bind:tap="navigationToDetail" data-data="team">
-			<view>导师介绍</view>
-			<view>Coaching team</view>
+		<view class="team" bind:tap="navigateTo2" data-data="daoshi">
 		</view>
-		<view class="children" bind:tap="navigationToDetail" data-data="children">
-			<view>少儿达人</view>
-			<view>Children master</view>
+		<view class="children" bind:tap="navigateTo2" data-data="news">
 		</view>
-	</view>
-	<view class="park" bind:tap="navigationToDetail" data-data="park">
-		<view>园区展示</view>
-		<view>park display</view>
-	</view>
-	<view class="class" bind:tap="navigationToDetail" data-data="class">
-		<view>课堂展示</view>
-		<view>class display</view>
 	</view>
 </view>
+
+<!-- 导师介绍开始 -->
+<view class="daoshi">
+	<van-divider contentPosition="center">导师介绍</van-divider>
+	<view class="info">
+		<view class="person" bindtap="detailone">
+			<view>
+				<image src="http://manager.kenput.cn/static/img/ps1.jpg" mode="widthFix"></image>
+			</view>
+			<view class="box">
+				<text>姓名：舒予导师</text>
+				<text>介绍：医学学士、MBA工商管理硕士
+				上市公司人力资源总监、运营总监
+				亲子导师，婚姻家庭两性关系导师
+				国家高级心理咨询师
+				NLP企业教练
+				</text>
+			</view>
+		</view>
+	</view>
+	<view class="info">
+		<view class="person" bindtap="detailtwo">
+			<view>
+				<image src="http://manager.kenput.cn/static/img/ps2.jpg" mode="widthFix"></image>
+			</view>
+			<view class="box">
+				<text>姓名：兰政教授</text>
+				<text>介绍：广西体育高等专科学校校园足球教育研究与培训中心主任
+				广西体育高等专科学校体育与教育副主任
+				教育部首批选派赴法国进行校园足球教练员留学人员
+				</text>
+			</view>
+		</view>
+	</view>
+</view>
+<!-- 导师介绍结束 -->
+
+<!-- 课堂展示开始 -->
+<view class="ketang">
+	<van-divider contentPosition="center">课堂展示</van-divider>
+	<view class="box">
+		<view class="info" wx:for="{{ketang}}" wx:key="index"  bind:tap="navigateTo2" data-data="lesson">
+			<image src="{{item.url}}" mode="widthFix"></image>
+			<text>{{item.title}}</text>
+		</view>
+	</view>
+</view>
+<!-- 课堂展示结束 -->
 <!-- tab -->
 <view class="tab">
 	<van-tabs animated swipeable>
 		<van-tab title="活动赛事">
-			<view class="list">
+			<view class="list" wx:for="{{news}}" wx:key="index"  bind:tap="goToDetail" data-id="{{item.id}}">
 				<view class="left">
 					<!-- 图片占位 -->
-					<van-image
-						width="100"
-						height="100"
-						src="http://dpic.tiankong.com/lg/ex/QJ8690559986.jpg"
-						fit="cover"
-						lazy-load
-					/>
+					<van-image width="100" height="100" src="{{item.src}}" fit="cover" lazy-load />
 				</view>
 				<view class="right">
-					<view class="tittle">我的暑期生活之少儿足球盛宴！</view>
-					<view class="content"
-						>参加本次08、09组别的队伍实力不凡——除了成都青训中心和重庆青训中心......</view
-					>
+					<view class="tittle">{{item.title}}</view>
+					<view class="content">{{item.sub}}</view>
 				</view>
 			</view>
 		</van-tab>
 		<van-tab title="动态热点">
-			<view class="list">
-				<view class="left">
-					<!-- 图片占位 -->
-					<van-image
-						width="100"
-						height="100"
-						src="http://dpic.tiankong.com/lg/ex/QJ8690559986.jpg"
-						fit="cover"
-						lazy-load
-					/>
-				</view>
-				<view class="right">
-					<view class="tittle">我的暑期生活之少儿足球盛宴！</view>
-					<view class="content"
-						>参加本次08、09组别的队伍实力不凡——除了成都青训中心和重庆青训中心......</view
-					>
-				</view>
-			</view>
+			<view class="list">这里显示动态热点……</view>
 		</van-tab>
 		<van-tab title="足球公益">
-			<view class="list">
-				<view class="left">
-					<!-- 图片占位 -->
-					<van-image
-						width="100"
-						height="100"
-						src="http://dpic.tiankong.com/lg/ex/QJ8690559986.jpg"
-						fit="cover"
-						lazy-load
-					/>
-				</view>
-				<view class="right">
-					<view class="tittle">我的暑期生活之少儿足球盛宴！</view>
-					<view class="content"
-						>参加本次08、09组别的队伍实力不凡——除了成都青训中心和重庆青训中心......</view
-					>
-				</view>
-			</view>
+			<view class="list">这里显示足球公益……</view>
 		</van-tab>
 	</van-tabs>
 </view>
@@ -165,14 +151,8 @@
 <van-overlay show="{{ localShow }}" bind:tap="onClickHide">
 	<view class="wrapper">
 		<view class="block" catch:tap="noop">
-			<van-picker
-				columns="{{ localList }}"
-				default-index="{{ 1 }}"
-				bind:change="onSelect"
-				class="picker"
-			/>
+			<van-picker columns="{{ localList }}" default-index="{{ 1 }}" bind:change="onSelect" class="picker" />
 			<button type="primary" bindtap="subLocal">默认按钮</button>
 		</view>
 	</view>
 </van-overlay>
-

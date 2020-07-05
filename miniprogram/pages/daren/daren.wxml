@@ -1,0 +1,20 @@
+<!-- 轮播图 -->
+<view class="banner">
+    <swiper class="swiper" indicator-dots indicator-color="rgba(0,0,0,.3)" autoplay current="0">
+        <!-- 要多少张banner就for几次 -->
+        <swiper-item class="swiper-item" item-id="" wx:if="{{banner}}" wx:for="{{banner}}" wx:key="index">
+            <image style="width:100%" mode="widthFix" src="{{item}}" lazy-load webp></image>
+        </swiper-item>
+    </swiper>
+</view>
+<view class="box">
+	<view class="info" wx:for="{{team}}" wx:key="index" bind:tap="goToDetail" data-id="{{item.id}}">
+		<image src="{{item.src}}" mode="aspectFill"></image>
+		<view>
+			<text>姓名：{{item.name}}</text>
+			<text>年龄：{{item.age}}</text>
+			<text>学校：{{item.school}}</text>
+			<text>介绍：{{item.content}}</text>
+		</view>
+	</view>
+</view>

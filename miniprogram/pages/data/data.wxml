@@ -1,0 +1,34 @@
+<view class="login" wx:if="{{!isLogin}}">
+    <button class="signInBtn" open-type="getUserInfo" bindgetuserinfo="login" type="primary">
+        登录
+    </button>
+</view>
+
+<view class="box"  wx:else>
+	<view class="info">
+		<view style="text-align: left;">尊敬的LiLei家长，以下是您小孩今天的数据：</view>
+		<view class="img"><image src="../../assets/images/male-active.png" mode="aspectFill"></image></view>
+		<view class="name">LiLei</view>
+		<view class="aui-flex aui-choice-text">
+			<view class="aui-sta">身高</view>
+			<view class="aui-flex-box">
+				<text class="aui-show-case" id="heightPicker">90</text>
+			</view>
+			<view class="aui-cm">厘米</view>
+		</view>
+		<view class="aui-flex aui-choice-text">
+			<view class="aui-sta">体重</view>
+			<view class="aui-flex-box">
+				<text class="aui-show-case" id="heightPicker">15</text>
+			</view>
+			<view class="aui-cm">公斤</view>
+		</view>
+		<view class="aui-flex aui-choice-text">
+			<view class="aui-sta">温度</view>
+			<view class="aui-flex-box">
+				<text class="aui-show-case" id="heightPicker">36.2</text>
+			</view>
+			<view class="aui-cm">°</view>
+		</view>
+	</view>
+</view>
