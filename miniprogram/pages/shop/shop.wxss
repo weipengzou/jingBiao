@@ -1,0 +1,101 @@
+.title {
+  width: 100%;
+  line-height: 36rpx;
+  font-weight: 600;
+  padding: 20rpx;
+  box-sizing: border-box;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.title .text {
+  font-size: 32rpx;
+}
+.title .more {
+  display: flex;
+  float: right;
+}
+.title .more iconfont {
+  display: flex;
+  align-items: center;
+}
+.price {
+  font-weight: bold;
+  font-size: 110%;
+  color: green;
+}
+.banner scroll-view swiper {
+  height: 400rpx;
+}
+.banner scroll-view swiper .swiper-item image {
+  width: 100%;
+  height: 100%;
+}
+.product .hot .content .van-image,
+.product .new .content .van-image {
+  width: 100%;
+  height: 200rpx;
+  border-radius: 20rpx;
+}
+.product .hot .content .van-image image,
+.product .new .content .van-image image {
+  border-radius: 20rpx;
+}
+.product .hot .content .scroll-view_H,
+.product .new .content .scroll-view_H {
+  white-space: nowrap;
+  width: 90%;
+  margin: 0 auto;
+  padding: 20rpx;
+  border-radius: 20rpx;
+  box-shadow: 18rpx 18rpx 30rpx rgba(0, 0, 0, 0.2);
+}
+.product .hot .content .scroll-view-item_H,
+.product .new .content .scroll-view-item_H {
+  width: 40%;
+  display: inline-block;
+  margin: 0 20rpx;
+}
+.product .recommend .content .goodsCard,
+.product .discount .content .goodsCard {
+  display: flex;
+  align-items: center;
+  box-sizing: border-box;
+  margin: 20rpx 10rpx;
+}
+.product .recommend .content .goodsCard .van-image,
+.product .discount .content .goodsCard .van-image {
+  width: 200rpx;
+  height: 200rpx;
+}
+.product .recommend .content .goodsCard .van-image image,
+.product .discount .content .goodsCard .van-image image {
+  border-radius: 20rpx;
+}
+.product .recommend .content .goodsCard .content,
+.product .discount .content .goodsCard .content {
+  padding: 0 0 0 20rpx;
+}
+.product .recommend .content .goodsCard .content .title,
+.product .discount .content .goodsCard .content .title {
+  padding: 10rpx 0;
+  font-weight: 600;
+  width: 500rpx;
+}
+.product .recommend .content .goodsCard .content .desc,
+.product .discount .content .goodsCard .content .desc {
+  text-overflow: -o-ellipsis-lastline;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+}
+.product .recommend .content .goodsCard .content .originPrice,
+.product .discount .content .goodsCard .content .originPrice {
+  font-weight: normal;
+  margin-left: 10rpx;
+  font-size: 55%;
+  color: black;
+  text-decoration: line-through;
+}

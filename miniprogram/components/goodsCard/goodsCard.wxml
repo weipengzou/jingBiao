@@ -1,0 +1,11 @@
+<view class="goodsCard">
+    <van-image src="{{imgSrc}}" fit="cover" />
+    <view class="content">
+        <view class="title">{{title}}</view>
+        <view class="desc">{{desc}}</view>
+        <view class="price">
+            <text>￥{{price}}</text>
+            <text class="originPrice">我是组件  原价:￥{{originPrice}}</text>
+        </view>
+    </view>
+</view>

@@ -1,0 +1,76 @@
+{
+  "pages": [
+    "components/logoPage/logoPage",
+    "pages/user/user",
+    "pages/home/home",
+    "pages/course/course",
+    "pages/shop/shop",
+    "pages/user/detail/orders/orders",
+    "pages/user/detail/wallet/wallet",
+    "pages/user/detail/userInfo/userInfo",
+    "pages/shop/detail/payment/payment",
+    "pages/shop/detail/goods/goods",
+    "pages/user/detail/orders/ordersHandle/ordersHandle",
+    "pages/course/detail/courseDetail/courseDetail",
+    "pages/course/detail/courseToPay/courseToPay"
+  ],
+  "usingComponents": {
+    "iconfont": "/assets/iconfont/iconfont",
+    "van-search": "@vant/weapp/search/index",
+    "van-tab": "@vant/weapp/tab/index",
+    "van-tabs": "@vant/weapp/tabs/index",
+    "van-divider": "@vant/weapp/divider/index",
+    "van-image": "@vant/weapp/image/index",
+    "van-sidebar": "@vant/weapp/sidebar/index",
+    "van-action-sheet": "@vant/weapp/action-sheet/index",
+    "van-sidebar-item": "@vant/weapp/sidebar-item/index",
+    "van-card": "@vant/weapp/card/index",
+    "van-overlay": "@vant/weapp/overlay/index",
+    "van-picker": "@vant/weapp/picker/index"
+  },
+  "window": {
+    "backgroundColor": "#F6F6F6",
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#F6F6F6",
+    "navigationBarTitleText": "竞彪",
+    "navigationBarTextStyle": "black"
+  },
+  "tabBar": {
+    "color": "#a9b7b7",
+    "selectedColor": "#11cd6e",
+    "borderStyle": "black",
+    "list": [
+      {
+        "iconPath": "./assets/images/icon-home.png",
+        "selectedIconPath": "./assets/images/icon-home-hot.png",
+        "pagePath": "pages/home/home",
+        "text": "首页"
+      },
+      {
+        "iconPath": "./assets/images/icon-class.png",
+        "selectedIconPath": "./assets/images/icon-class-hot.png",
+        "pagePath": "pages/course/course",
+        "text": "课程"
+      },
+      {
+        "iconPath": "./assets/images/icon-cart.png",
+        "selectedIconPath": "./assets/images/icon-cart-hot.png",
+        "pagePath": "pages/shop/shop",
+        "text": "商城"
+      },
+      {
+        "iconPath": "./assets/images/icon-user.png",
+        "selectedIconPath": "./assets/images/icon-user-hot.png",
+        "pagePath": "pages/user/user",
+        "text": "我的"
+      }
+    ]
+  },
+  "permission": {
+    "scope.userLocation": {
+      "desc": "你的位置信息将用于kenput小程序"
+    }
+  },
+  "sitemapLocation": "sitemap.json",
+  "style": "v2"
+}

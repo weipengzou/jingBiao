@@ -1,0 +1,115 @@
+<!-- 搜索 -->
+<van-search value="{{ value }}" placeholder="请输入搜索关键词" use-action-slot>
+	<view slot="action" bind:tap="search">搜索</view>
+</van-search>
+<!-- 轮播 -->
+<view class="banner">
+	<scroll-view>
+		<swiper class="swiper" indicator-dots autoplay>
+			<swiper-item class="swiper-item" wx:for="{{banner}}" wx:key="index">
+				<image
+					mode="aspectFill"
+					src="{{item.images[0]}}"
+					bind:tap="navigationTo"
+					data-goodsid="{{item.goodsid}}"
+					lazy-load
+					webp
+				></image>
+			</swiper-item>
+		</swiper>
+	</scroll-view>
+</view>
+<!-- 商品分类 -->
+<view class="product">
+	<view class="hot">
+		<view class="title">
+			<text class="text">热门榜单</text>
+			<view class="more" bind:tap="more" data-data="hot">
+				<text>更多</text>
+				<iconfont name="right" size="24"></iconfont>
+			</view>
+		</view>
+		<view class="content">
+			<!-- 小轮播图片 -->
+			<scroll-view class="scroll-view_H" scroll-x="true">
+				<view class="scroll-view-item_H" wx:for="{{4}}" wx:key="index">
+					<view class="goodsBlock">
+						<van-image src="{{fakeGoods.img}}" fit="cover" />
+						<view class="title">{{fakeGoods.title}}</view>
+						<view class="price">
+							<text>￥{{fakeGoods.price}}</text>
+						</view>
+					</view>
+				</view>
+			</scroll-view>
+		</view>
+	</view>
+	<van-divider />
+	<view class="recommend">
+		<view class="title">
+			<text class="text">精品推荐</text>
+			<view class="more" bind:tap="more" data-data="recommend">
+				<text>更多</text>
+				<iconfont name="right" size="24"></iconfont>
+			</view>
+		</view>
+		<view class="content">
+			<view wx:for="{{hotList}}" bind:tap="navigationTo" data-goodsid="{{item.goodsid}}">
+				<!-- 封装的组件 -->
+				<goodsCard
+					imgSrc="{{fakeGoods.img}}"
+					title="{{fakeGoods.title}}"
+					desc="{{fakeGoods.desc}}"
+					price="{{fakeGoods.price}}"
+					originPrice="{{fakeGoods.originPrice}}"
+				></goodsCard>
+			</view>
+		</view>
+	</view>
+	<van-divider />
+	<view class="new">
+		<view class="title">
+			<text class="text">首发新品</text>
+			<view class="more" bind:tap="more" data-data="new">
+				<text>更多</text>
+				<iconfont name="right" size="24"></iconfont>
+			</view>
+		</view>
+		<view class="content">
+			<!-- 小轮播图片 -->
+			<scroll-view class="scroll-view_H" scroll-x="true">
+				<view class="scroll-view-item_H" wx:for="{{4}}" wx:key="index">
+					<view class="goodsBlock">
+						<van-image src="{{fakeGoods.img}}" fit="cover" />
+						<view class="title">{{fakeGoods.title}}</view>
+						<view class="price">
+							<text>￥{{fakeGoods.price}}</text>
+						</view>
+					</view>
+				</view>
+			</scroll-view>
+		</view>
+	</view>
+	<van-divider />
+	<view class="discount">
+		<view class="title">
+			<text class="text">促销单品</text>
+			<view class="more" bind:tap="more" data-data="discount">
+				<text>更多</text>
+				<iconfont name="right" size="24"></iconfont>
+			</view>
+		</view>
+		<view class="content">
+			<view wx:for="{{hotList}}" bind:tap="navigationTo" data-goodsid="{{item.goodsid}}">
+				<!-- 封装的组件 -->
+				<goodsCard
+					imgSrc="{{fakeGoods.img}}"
+					title="{{fakeGoods.title}}"
+					desc="{{fakeGoods.desc}}"
+					price="{{fakeGoods.price}}"
+					originPrice="{{fakeGoods.originPrice}}"
+				></goodsCard>
+			</view>
+		</view>
+	</view>
+</view>

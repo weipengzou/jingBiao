@@ -1,0 +1,41 @@
+page {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.top {
+  width: 95vw;
+}
+.top .card {
+  width: 100%;
+  background-color: #00b464;
+  border-radius: 10rpx;
+  padding: 10rpx;
+  box-sizing: border-box;
+  color: white;
+}
+.top .card .tittle {
+  font-weight: 600;
+  font-size: 110%;
+}
+.top .card .balance,
+.top .card .accumulated-amount {
+  color: rgba(245, 245, 245, 0.6);
+}
+.top .btn-box {
+  display: flex;
+  justify-content: space-around;
+}
+.top .btn-box .btn {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.bottom {
+  position: fixed;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  text-align: center;
+}

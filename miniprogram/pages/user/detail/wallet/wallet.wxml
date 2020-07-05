@@ -1,0 +1,27 @@
+<h1>钱包页面</h1>
+<view class="top">
+    <view class="card">
+        <view class="money">
+            <view class="tittle">余额</view>
+            <view class="balance">¥{{money}}</view>
+        </view>
+        <view class="accumulated">
+            <view class="tittle">累计消费</view>
+            <view class="accumulated-amount">¥{{0}}</view>
+        </view>
+    </view>
+    <view class="btn-box">
+        <view class="btn" bind:tap="navigationTo">
+            <icon class="iconfont icon-fasong" />
+            <text>账单记录</text>
+        </view>
+        <view class="btn" bind:tap="navigationTo">
+            <icon class="iconfont icon-fasong" />
+            <text>消费记录</text>
+        </view>
+    </view>
+</view>
+<view class="bottom">
+    <view>By@Kenput</view>
+    <view>Copyright2020</view>
+</view>

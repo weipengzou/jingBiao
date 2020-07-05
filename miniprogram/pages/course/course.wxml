@@ -1,0 +1,34 @@
+<view class="bigBox">
+    <view class="left">
+        <van-sidebar active-key="{{ activeKey }}" bind:change="activeChange" custom-class="sidebar">
+            <van-sidebar-item title="课程分类" custom-class="sidebar-item" />
+            <van-sidebar-item title="精彩瞬间" custom-class="sidebar-item" />
+        </van-sidebar>
+    </view>
+    <view class="right">
+        <scroll-view class="scroll" scroll-y="true">
+            <swiper vertical current="{{activeKey}}" bindchange="activeKeyChange" easing-function="easeOutCubic">
+                <view class="courseTitle">
+                    <view>课程</view>
+                </view>
+                <swiper-item class="item1">
+                    <view class="course-list" bind:tap="navigationTo" data-data='少儿课程'>
+                        <van-image round width="120rpx" height="120rpx" src="https://image.dayouqiantu.cn/1585727667472.png" />
+                        少儿课程
+                    </view>
+                    <view class="course-list" bind:tap="navigationTo" data-data='精品课程'>
+                        <van-image round width="120rpx" height="120rpx" src="https://image.dayouqiantu.cn/1585727688027.png" />
+                        精品课程
+                    </view>
+                    <view class="course-list" bind:tap="navigationTo" data-data='进阶课程'>
+                        <van-image round width="120rpx" height="120rpx" src="https://image.dayouqiantu.cn/1585727696618.png" />
+                        进阶课程
+                    </view>
+                </swiper-item>
+                <swiper-item>
+                    <view>get user photo or video</view>
+                </swiper-item>
+            </swiper>
+        </scroll-view>
+    </view>
+</view>

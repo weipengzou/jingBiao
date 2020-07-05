@@ -1,0 +1,54 @@
+.bigBox {
+  display: flex;
+}
+.bigBox .left .sidebar {
+  height: 100vh;
+  background-color: white;
+}
+.bigBox .left .sidebar .sidebar-item {
+  background: none;
+}
+.bigBox .left .sidebar .van-sidebar-item--selected {
+  border-color: green;
+}
+.bigBox .right {
+  width: 100%;
+}
+.bigBox .right .scroll {
+  height: 100vh;
+}
+.bigBox .right .scroll swiper {
+  height: 100vh;
+}
+.bigBox .right .scroll swiper .courseTitle {
+  text-align: center;
+  position: relative;
+  margin: 10rpx 0;
+}
+.bigBox .right .scroll swiper .courseTitle ::before,
+.bigBox .right .scroll swiper .courseTitle ::after {
+  content: '';
+  position: absolute;
+  top: 52%;
+  background: #494949;
+  width: 20%;
+  height: 5rpx;
+}
+.bigBox .right .scroll swiper .courseTitle ::before {
+  left: 20%;
+}
+.bigBox .right .scroll swiper .courseTitle ::after {
+  right: 20%;
+}
+.bigBox .right .scroll swiper .item1 {
+  display: flex;
+  justify-content: space-around;
+}
+.bigBox .right .scroll swiper .item1 .course-list {
+  flex: 0 0 33.33%;
+  height: 200rpx;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}

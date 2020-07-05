@@ -1,0 +1,200 @@
+.banner {
+    scroll-view {
+        height: 400rpx;
+
+        swiper {
+            margin: 0 10rpx;
+            box-sizing: border-box;
+            height: 400rpx;
+
+            image {
+                width: 100%;
+                border-radius: 20rpx;
+
+            }
+        }
+
+
+    }
+
+}
+
+.notice {
+    display: flex;
+    height: 80rpx;
+    line-height: 80rpx;
+    justify-content: space-between;
+    margin: 0 10rpx;
+
+    .img {
+        width: 30vw;
+        font-weight: 800;
+        font-size: 36rpx;
+        text-align: center;
+        color: green
+    }
+
+    .notice-scroll {
+        width: 70vw;
+
+        .notice-swiper {
+            height: 110rpx;
+
+            .notice-swiper-item {
+                view {
+                    width: 100%;
+                    box-sizing: border-box;
+                    background-color: rgba(0, 0, 0, 0.5);
+                    border-radius: 20rpx;
+                    padding: 0 50rpx;
+                    color: white;
+                    overflow: hidden;
+                    text-overflow: ellipsis;
+                    display: -webkit-box;
+                    -webkit-line-clamp: 1;
+                    -webkit-box-orient: vertical;
+                }
+
+            }
+
+            icon {
+                float: right;
+                margin: 0 50rpx;
+            }
+        }
+    }
+}
+
+.nav {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    margin: 5rpx 0;
+
+    .nav-btn {
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        align-items: center;
+        width: 25%;
+
+        view {
+            margin: 10rpx 0;
+        }
+    }
+}
+
+.about {
+    color: white;
+    text-align: center;
+
+    >view {
+
+        box-sizing: border-box;
+        margin: 10rpx 20rpx;
+    }
+
+    // 图片存放服务器
+    .company {
+        background: url('http://admin.kenput.cn/file/pic/left-20200526105802872.png');
+    }
+
+    .team {
+        background: url('http://admin.kenput.cn/file/pic/center-20200526105758288.png');
+    }
+
+    .children {
+        background: url('http://admin.kenput.cn/file/pic/right-2020052610580792.png');
+    }
+
+    .park {
+        background: url('https://zwp1.top/images/home-park.jpg') no-repeat center;
+    }
+
+    .class {
+        background: url('https://zwp1.top/images/home-class.jpg') no-repeat center;
+    }
+
+    .park,
+    .class {
+        letter-spacing: 5rpx;
+        background-size: cover;
+    }
+
+
+    .small-view {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .company,
+    .team,
+    .children,
+    .park,
+    .class {
+        height: 250rpx;
+        background-color: green;
+        padding-top: 40rpx;
+        border-radius: 20rpx;
+
+        :first-child {
+            font-size: 36rpx;
+            font-weight: 500;
+        }
+    }
+
+    .company,
+    .team,
+    .children {
+        width: 230rpx;
+        font-size: 28rpx;
+        background-size: cover;
+    }
+}
+
+.tab {
+    .list {
+        display: flex;
+        justify-content: center;
+
+        .left,
+        .right {
+            margin: 0 10rpx;
+        }
+
+        .right {
+            width: 500rpx;
+
+            .tittle {
+                font-weight: bold;
+            }
+
+            .content {
+                font-size: 95%;
+                color: gray;
+                overflow: hidden;
+                text-overflow: ellipsis;
+                display: -webkit-box;
+                -webkit-line-clamp: 3;
+                -webkit-box-orient: vertical;
+            }
+        }
+    }
+}
+
+// 选择地址样式
+.wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    .block {
+        width: 700rpx;
+        height: 700rpx;
+        border-radius:20rpx;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        background-color: #fff;
+      }
+}

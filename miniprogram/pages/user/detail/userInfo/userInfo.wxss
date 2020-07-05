@@ -1,0 +1,12 @@
+label {
+  display: flex;
+}
+.userInfo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.userInfo > view {
+  margin: 20rpx 0;
+}

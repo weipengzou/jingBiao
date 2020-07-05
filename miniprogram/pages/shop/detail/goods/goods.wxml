@@ -1,0 +1,33 @@
+<!-- 轮播图 -->
+<view class="banner">
+    <swiper class="swiper" indicator-dots indicator-color="rgba(0,0,0,.3)" autoplay current="0">
+        <!-- 要多少张banner就for几次 -->
+        <swiper-item class="swiper-item" item-id="" wx:if="{{banner}}" wx:for="{{banner}}" wx:key="index">
+            <image style="width:100%" mode="widthFix" src="{{item}}" lazy-load webp></image>
+        </swiper-item>
+    </swiper>
+</view>
+<view class="price">价格￥{{price}}</view>
+<view class="title">{{title}}</view>
+<view class="stock">剩余:{{stock}}</view>
+<view class="">
+
+</view>
+<!-- 商品内容 -->
+<view class="content">{{content}}</view>
+<view class="bottom-btnBox">
+    <button class="btn">收藏</button>
+    <button class="btn,pay" bind:tap="ClickPayBtn">购买</button>
+</view>
+<!-- 尺码选择 -->
+<van-action-sheet show="{{ isClickPayBtn }}" title="Size" bind:close="onClose">
+    <view class="action-sheet">
+        <radio-group class="sizeGroup" bindchange="sizeChange">
+            <label class="size-item" wx:for="{{sizeItems}}" wx:key="index">
+                <radio class="radio" value="{{item.value}}"></radio>
+                {{item.name}}
+            </label>
+        </radio-group>
+        <button bind:tap="goToPay">去支付</button>
+    </view>
+</van-action-sheet>

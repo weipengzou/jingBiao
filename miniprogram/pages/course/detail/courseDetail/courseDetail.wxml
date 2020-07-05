@@ -1,0 +1,19 @@
+<view class="" hover-class="none" hover-stop-propagation="false">课程详细页</view>
+<!-- 轮播图 -->
+<view class="banner">
+    <swiper class="swiper" indicator-dots indicator-color="rgba(0,0,0,.3)" autoplay current="0">
+        <!-- 要多少张banner就for几次 -->
+        <swiper-item class="swiper-item" item-id="" wx:if="{{banner}}" wx:for="{{banner}}" wx:key="index">
+            <image style="width:100%" mode="widthFix" src="{{item}}" lazy-load webp></image>
+        </swiper-item>
+    </swiper>
+</view>
+<view class="main">
+    <view class="title">课程标题</view>
+    <view class="content">课程内容</view>
+</view>
+<!-- 购买按钮以后要封装成组件 -->
+<view class="bottom-btnBox">
+    <button class="btn">收藏</button>
+    <button class="btn,pay" bind:tap="ClickPayBtn">购买</button>
+</view>
