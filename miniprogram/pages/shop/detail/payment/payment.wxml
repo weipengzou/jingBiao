@@ -1,9 +1,0 @@
-支付页面
-<!-- 等弄好订单表再做支付 -->
-<view>产品编号：{{goods.id}}</view>
-<!-- <image src="{{goods.img}}" style="width:50%;margin:0 auto" mode="widthFix" lazy-load></image> -->
-<image mode="aspectFill" src="{{goods.img}}" style="width:100%" lazy-load webp></image>
-<view>码数：{{goods.size}}</view>
-<view>价格：{{goods.price}}</view>
-<view>收货地址:{{userInfo.address}}</view>
-<button bind:tap="goToPay">确认支付</button>

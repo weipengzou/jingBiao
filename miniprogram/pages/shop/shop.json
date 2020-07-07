@@ -1,7 +1,0 @@
-{
-  "usingComponents": {
-    "goodsCard": "../../components/goodsCard/goodsCard"
-  },
-  "enablePullDownRefresh": true,
-  "navigationBarTitleText": "竞彪商城"
-}
